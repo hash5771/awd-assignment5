@@ -1,0 +1,61 @@
+@charset "ISO-8859-1";
+
+#wrapper {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+label {
+	margin-right: .2em;
+	width: 7em;  /* I made this deliberately wide – come up with your own optimal width */
+	display: inline-block; /* width will not work for “inline” elements such as “label”. Therefore we need to set it to “inline-block” */
+	text-align: right;
+}
+
+li {
+	margin-bottom: 1em;
+}
+
+input[type="text"] {
+	width: 30em;
+}
+
+li:has(input[type="radio"]) label {
+	text-align: left;
+}
+
+#formcol1 input.reqfield {
+	background:#FF9;
+}
+
+
+#formcol1 li {   
+	list-style:none;
+}
+
+#formcol1 > fieldset {
+	margin-bottom: 1em;
+}
+
+li:has(.reqfield) > label:after {
+	content: "*";
+	color: red;
+	margin-left: 0.1em;
+}
+
+select:focus, select:active, input:focus, input:active, input:focus + label, input:active + label, label[for]:focus, label[for]:active, button:focus {
+	color: #FFF !important;
+	background-color: #BB3D2F !important;
+}
+
+.submit-button {
+	background-color: #353535;
+	color: #FFF;
+	border: none;
+	padding: 0.5em 1em;
+	cursor: pointer;
+	width: 100%;
+}
+
